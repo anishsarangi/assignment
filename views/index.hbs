@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="./index.css">
+    </head>
+    <body>
+        {{# if login }}
+            <h2>hey everyone</h2>
+            <a href="/logout"></a>
+        {{ else }}
+        <form id='login-form' action="/login" method="POST">
+            <label for="username">
+                <input type="text" name="username" id="login-username" placeholder="Username" required>
+            </label>
+            <label for="password">
+                <input type="password" name="password" id="login-password" placeholder="Password" required>
+            </label>
+            <button type='submit' id="login-form-submit">Login</button>
+            <span id="register">Register</span>
+        </form>
+        <form id='register-form' action="/register" method="POST">
+            <label for="username">
+                <input type="text" name="username" id="register-username" placeholder="Username" required>
+            </label>
+            <label for="studentId">
+                <input type="text" name="studentid" id="register-studentid" placeholder="StudentId" required>
+            </label>
+            <label for="password">
+                    <input type="password" name="password" id="register-password" placeholder="Password" required>
+            </label>
+            <button type='submit' id="register-form-submit">Register</button>
+            <span id="login">Already Member ? Sign In Now..</span>
+        </form>
+        {{/if}}
+    </body>
+</html>
